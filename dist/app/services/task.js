@@ -146,7 +146,7 @@ app.factory('Task', function() {
             icon: '',
             message: 'Take a snapchat of your project to show your progress to the entire world',
             time: 1,
-            productivity: 'good',,
+            productivity: 'good',
             category: 'social'
         },
     ];
