@@ -5,19 +5,19 @@
 		<ul class="sidebar-nav">
 			<li class="sidebar-back"><a ui-sref="main.home"><i class="mdi-navigation-arrow-back"></i> Back</a></li>
 			<li class="sidebar-brand">
-				Mah App, yo
+				Event Title
 			</li>
-			<li ng-class="{active: $state.includes('main.apps')}">
-				<a ui-sref="main.home">Home</a>
+			<li ng-class="{active: $state.includes('hackathon.dashboard')}">
+				<a ui-sref="hackathon.dashboard"><i class="fa fa-home fa-lg"></i> Home</a>
 			</li>
-			<li ng-class="{active: $state.includes('main.account')}">
-				<a ui-sref="main.account">My Team</a>
+			<li ng-class="{active: $state.includes('hackathon.team')}">
+				<a ui-sref="hackathon.team"><i class="fa fa-users fa-lg"></i> My Team</a>
 			</li>
-			<li ng-class="{active: $state.includes('main.settings')}">
-				<a ui-sref="main.settings"><i class="fa fa-cog fa-lg"></i> Settings</a>
+			<li ng-class="{active: $state.includes('hackathon.settings')}">
+				<a ui-sref="hackathon.settings"><i class="fa fa-cog fa-lg"></i> Settings</a>
 			</li>
-			<li ng-class="{active: $state.includes('main.settings')}">
-				<a ui-sref="main.settings"><i class="fa fa-cog fa-lg"></i> Current Hackathon</a>
+			<li ng-class="{active: $state.includes('hackathon.event')}">
+				<a ui-sref="hackathon.event"><i class="fa fa-rocket fa-lg"></i> Current Hackathon</a>
 			</li>
 		</ul>
 	</div>

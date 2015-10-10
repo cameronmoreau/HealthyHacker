@@ -19,6 +19,7 @@
     "tests"
   ],
   "dependencies": {
+    "angular-azure-mobile-service": "~1.3.10",
     "angular-chart.js": "~0.8.4",
     "angular-mocks": "~1.4.2",
     "angular-resource": "~1.4.7",
@@ -27,7 +28,6 @@
     "bootstrap": "~3.3.5",
     "bootstrap-material-design": "~0.3.0",
     "font-awesome": "~4.4.0",
-    "angular-chart.js": "~0.8.4",
     "progressbar.js": "~0.9.0"
   }
 }

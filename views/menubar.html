@@ -1,6 +1,6 @@
 <html>
 <head>
-<link rel="stylesheet" href="../src/scss/style.scss">
+<!-- <link rel="stylesheet" href="../src/scss/style.scss"> -->
 <link rel="stylesheet" href="../dist/vendor/bootstrap-material-design/dist/css/material.css" />
 </head>
 <div class="menu-window">
@@ -9,13 +9,20 @@
 
 	<hr style="padding:10px">
 	<span class= "bottom-bar">
-		<a class="btn btn-info">Open</a>
+		<a onclick="openMain()" class="btn btn-info">Open</a>
 	</span>
 	<span class="bottom-bar right">
-	
+
 		<a href="javascript:void(0)" class="btn btn-primary btn-fab btn-raised mdi-action-grade" style="height:1px; width:1px;"></a>
-		
+
 	</span>
 
 </div>
+
+	<script type="text/javascript">
+		var ipc = require('ipc');
+		function openMain() {
+			ipc.send('show-main');
+		}
+	</script>
 </html>
