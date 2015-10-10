@@ -54,7 +54,8 @@
   },
   "dependencies": {
     "jquery": "^2.1.4",
-    "menubar": "^2.2.1"
+    "menubar": "^2.2.1",
+    "underscore": "^1.8.3"
   },
   "jspm": {
     "dependencies": {},
