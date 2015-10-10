@@ -6,6 +6,8 @@ var path = require('path');
 var BrowserWindow = require('browser-window');
 var menubar = require('menubar');
 
+//var robot = require("robotjs");
+
 // Report crashes to our server.
 require('crash-reporter').start();
 
@@ -49,4 +51,6 @@ app.on('ready', function() {
     mainWindow.on('closed', function() {
         mainWindow = null;
     });
+
+    //console.log(robot.getMousePos());
 });

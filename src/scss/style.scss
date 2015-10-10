@@ -5,7 +5,7 @@
 
 $sidebar-width: 200px;
 $sidebar-width-collapse: 60px;
-$color-background: #f8f8f8;
+$color-background: #eee;
 $color-sidebar: #31323A;
 $color-highlight: #F75163;
 
@@ -26,7 +26,39 @@ body {
 	overflow: auto;
 	margin: 0;
 	-webkit-overflow-scrolling: touch;
-	background: #fff;
+	background: $color-background;
+}
+
+.well .title > div, h3, p {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.well .title h3 {
+	margin: 5px;
+}
+
+
+
+.circle {
+	border-radius: 50%;
+}
+
+.circle-letter {
+	width: 56px;
+	height: 56px;
+	background: #ccc;
+	text-align: center;
+	color: #fff;
+	font-size: 26px;
+	padding-top: 12px;
+	vertical-align: middle;
+}
+
+//PRojects
+.project-box {
+	//padding: ;
+
 }
 
 /* SIDE BAR */

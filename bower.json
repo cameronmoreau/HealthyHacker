@@ -24,7 +24,6 @@
     "angularjs": "~1.4.1",
     "bootstrap": "~3.3.5",
     "bootstrap-material-design": "~0.3.0",
-    "font-awesome": "~4.4.0",
-    "skeleton": "~2.0.4"
+    "font-awesome": "~4.4.0"
   }
 }
