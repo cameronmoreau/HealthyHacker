@@ -7,15 +7,18 @@
         $scope.projects = [
 			{
 				name: 'TAMU Hack',
-				team: 4
+				team: 4,
+				date: '10/10/2015'
 			},
 			{
 				name: 'HackDFW',
-				team: 4
+				team: 4,
+				date: '4/10/2015'
 			},
 			{
 				name: 'MITHack',
-				team: 4
+				team: 4,
+				date: '1/10/2015'
 			},
         ];
 
