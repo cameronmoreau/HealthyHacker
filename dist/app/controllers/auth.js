@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    var app = angular.module('controller.auth', []);
+    var app = angular.module('controller.auth', ['ui.bootstrap']);
 
     app.controller('LoginController', function($scope, Azureservice) {
         

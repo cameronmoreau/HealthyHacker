@@ -11,7 +11,7 @@ exports.shortCuts = function(){
 
 
 
-	// map input shortcut with list data
+/*	// map input shortcut with list data
 	_.each(list, function(item) {
 		var tempkey = item["key"];
 		var ret = globalShortcut.register(tempkey, function() {
@@ -28,7 +28,7 @@ exports.shortCuts = function(){
   	  // Check whether a shortcut is registered.
 
      // console.log(globalShortcut.isRegistered(tempkey));
-	});
+	});*/
 
 
 }
