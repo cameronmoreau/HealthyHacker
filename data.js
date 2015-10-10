@@ -24,3 +24,11 @@ exports.shortCuts = function(){
    
 
 }
+
+    
+
+exports.mouse = function(){
+  var electronScreen = require('screen');
+  setInterval(function(){console.log(electronScreen.getCursorScreenPoint())},2000);
+
+}
