@@ -27,6 +27,16 @@
             });
         }
 
+        $scope.openRegisterModal = function() {
+            var modalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: 'auth/register.html',
+                controller: 'LoginController'
+            });
+        }
+
     });
+
+
 
 })();
