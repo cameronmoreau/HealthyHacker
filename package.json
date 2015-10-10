@@ -10,7 +10,7 @@
   },
   "main": "main.js",
   "scripts": {
-    "start": "electron . && gulp watch",
+    "start": "electron .",
     "postinstall": "bower install && jspm install",
     "debug": "node-inspector && electron --debug=5858 && ",
     "test": "jest --verbose && karma start",

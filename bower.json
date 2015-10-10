@@ -19,8 +19,9 @@
     "tests"
   ],
   "dependencies": {
+    "angular-mocks": "~1.4.2",
     "angularjs": "~1.4.1",
-    "skeleton": "~2.0.4",
-    "angular-mocks": "~1.4.2"
+    "bootstrap-material-design": "~0.3.0",
+    "skeleton": "~2.0.4"
   }
 }
