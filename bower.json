@@ -25,7 +25,6 @@
     "bootstrap": "~3.3.5",
     "bootstrap-material-design": "~0.3.0",
     "font-awesome": "~4.4.0",
-    "skeleton": "~2.0.4",
     "angular-chart.js": "~0.8.4"
   }
 }
