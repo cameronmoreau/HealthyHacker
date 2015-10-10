@@ -1,7 +1,7 @@
 (function() {
 	'use strict';
 
-	var app = angular.module('controller.dashboard', ['chart.js']);
+	var app = angular.module('controller.hackathon', ['chart.js']);
 
 	app.controller('DashboardController', function($scope) {
 		$scope.labels = ["January", "February", "March", "April", "May", "June", "July"];

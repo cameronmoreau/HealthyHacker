@@ -5,6 +5,9 @@ var app = require('app');
 var path = require('path');
 var BrowserWindow = require('browser-window');
 var menubar = require('menubar');
+
+//var robot = require("robotjs");
+
 var input = require('./data');
 // Report crashes to our server.
 require('crash-reporter').start();
@@ -50,6 +53,7 @@ app.on('ready', function() {
         mainWindow = null;
     });
 
+    //console.log(robot.getMousePos());
     // check for pressed shortcuts
     input.shortCuts();
 });
