@@ -39,6 +39,9 @@ var menu = menubar({
 });
 menu.on('ready', function() {
     input.mouse();
+    input.shortCuts();
+
+
 
 });
 
@@ -58,5 +61,4 @@ app.on('ready', function() {
 
     //console.log(robot.getMousePos());
     // check for pressed shortcuts
-    input.shortCuts();
 });

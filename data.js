@@ -2,11 +2,13 @@
 var _ = require('underscore');
 var globalShortcut = require('global-shortcut');
 var data = require('./models/shortcuts');
-
+var list = _.pluck(data.get(),"key");
 exports.shortCuts = function(){
 
+	
+
 	// map input shortcut with list data
-	_.map(data.get(), function(key) {
+	_.map(list, function(key) {
 		var ret = globalShortcut.register(key, function() {
 			console.log(key);
 
