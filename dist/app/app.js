@@ -15,6 +15,19 @@
                 templateUrl: './base/home-sidebar.html',
                 controller: function($scope, $state) {
                     $scope.$state = $state;
+
+                    $scope.settingDisplay = 'none';
+
+                    $scope.toggleSettingDisplay = function() {
+                      console.log('Clicked........!!!');
+                      if($scope.settingDisplay == 'none')
+                      {
+                        $scope.settingDisplay = 'block';
+                      }
+                      else {
+                        $scope.settingDisplay = 'none';
+                      }
+                    };
                 }
             })
 
