@@ -1,13 +1,13 @@
 <h1>Dashboard</h1>
 <div class="row">
     <div class="col-md-12">
-    	<canvas id="line" class="chart chart-line" chart-data="data"
-  chart-labels="labels" chart-legend="true" chart-series="series"
+    	<canvas id="line" class="chart chart-line" chart-data="productivityLevel"
+  chart-labels="datetime" chart-legend="true" chart-series="series"
   chart-click="onClick">
 	</canvas>
     </div>
 
-    <div class="col-md-12">
+    <div class="col-md-8">
         <h2>Breaks</h2>
         <hr>
         <div class="list-group" ng-repeat="break in breaks">
@@ -25,4 +25,26 @@
 		</div>
 
     </div>
+
+    <div class="col-md-4">
+        <div id="increased-productivity-percent"></div>
+    	<script type="text/javascript">
+    		var circle = new ProgressBar.Circle('#increased-productivity-percent', {
+    color: '#FCB03C',
+    strokeWidth: 5,
+    trailWidth: 1,
+    duration: 1500,
+    fill: '#ddd',
+    text: {
+        value: '34'
+    },
+    step: function(state, bar) {
+        bar.setText((bar.value() * 100).toFixed(0));
+    }
+});
+
+circle.animate(0.34);
+    	</script>
+    </div>
+
 </div>
