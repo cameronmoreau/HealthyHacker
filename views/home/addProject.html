@@ -1,0 +1,41 @@
+<div class="modal-header">
+    <center><h3 class="modal-title">Add a Hackathon!</h3></center>
+</div>
+
+<div class="modal-body">
+    <form class="form-horizontal" padding="10px">
+        <fieldset style="padding:10px">
+            <div class="form-group">
+                <label class="col-lg-2 control-label">Hackathon Name</label>
+                <div class="col-lg-10">
+                    <input class="form-control" ng-model="addProjectName" placeholder="Hackathon Name" type="text">
+                </div>
+            </div>
+            
+        </fieldset>
+    </form>
+
+     <div class="row">
+        <div class="col-sm-6">
+            <p class="input-group">
+              <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dtStart" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions"  ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="openStartDateTimePicker($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+        </div>
+   
+        <div class="col-sm-6">
+            <p class="input-group">
+              <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dtEnd" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions"  ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="openEndDateTimePicker($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+        </div>
+    </div>
+
+<div class="modal-footer">
+    <button class="btn btn-default" ng-click="test()">Cancel</button>
+    <button class="btn btn-primary" ng-click="test()">Submit</button>
+</div>

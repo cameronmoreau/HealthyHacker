@@ -18,6 +18,25 @@
             date: '1/10/2015'
         }, ];
 
+        $scope.openStartDateTimePicker = function($event) {
+            $scope.status.opened = true;
+        };
+         $scope.openEndDateTimePicker = function($event) {
+            $scope.status.opened = true;
+        };
+
+          $scope.status = {
+            opened: false
+          };
+
+        $scope.test = function(){
+            console.log($scope.addProjectStartTime);
+        }
+        $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
+        $scope.format = $scope.formats[0];
+
+
+
 
         $scope.openLoginModal = function() {
             var modalInstance = $uibModal.open({
@@ -35,8 +54,15 @@
             });
         }
 
-    });
+        $scope.openAddModal = function() {
+            var modalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: 'home/addProject.html',
+                controller: 'ProjectsController'
+            });
+        }
 
+    });
 
 
 })();
