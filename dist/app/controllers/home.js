@@ -18,6 +18,8 @@
             date: '1/10/2015'
         }, ];
 
+        var modalInstance = null;
+
 
         $scope.openStartDateTimePicker = function($event) {
             $scope.status.startOpened = true;
@@ -41,7 +43,7 @@
 
 
         $scope.openLoginModal = function() {
-            var modalInstance = $uibModal.open({
+            modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
                 templateUrl: 'auth/login.html',
                 controller: 'LoginController'
@@ -49,7 +51,7 @@
         }
 
         $scope.openRegisterModal = function() {
-            var modalInstance = $uibModal.open({
+            modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
                 templateUrl: 'auth/register.html',
                 controller: 'LoginController'
@@ -57,7 +59,7 @@
         }
 
         $scope.openAddModal = function() {
-            var modalInstance = $uibModal.open({
+            modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
                 templateUrl: 'home/addProject.html',
                 controller: 'ProjectsController'
@@ -100,13 +102,21 @@
                     date : date
 
                 };
-                $scope.projects.push($scope.tempProj)
+                $scope.projects.push($scope.tempProj);
                 console.log( $scope.projects);
-                $scope.$apply();
+                $scope.$close();
             }
             else{
                // alert('error');
             }
+        }
+
+        $scope.refreshList = function() {
+            var items = $scope.projects;
+            $scope.projects = [];
+            // for(int i = 0; i < items.length; i++) {
+            //
+            // }
         }
 
     });
