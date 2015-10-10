@@ -11,22 +11,22 @@ exports.shortCuts = function(){
 
 
 	// map input shortcut with list data
-	_.each(list, function(item) {
-		var tempkey = item["key"];
-		var ret = globalShortcut.register(tempkey, function() {
-			console.log(tempkey);
-			console.log(item["score"]);
-			//free the key
-			globalShortcut.unregister(tempkey);
-
-		});
-
-
-    if (!ret) {  console.log("registration failed");}
-
-  	  // Check whether a shortcut is registered.
-     console.log(globalShortcut.isRegistered(tempkey));
-	});
+	// _.each(list, function(item) {
+	// 	var tempkey = item["key"];
+	// 	var ret = globalShortcut.register(tempkey, function() {
+	// 		console.log(tempkey);
+	// 		console.log(item["score"]);
+	// 		//free the key
+	// 		globalShortcut.unregister(tempkey);
+	//
+	// 	});
+	//
+	//
+  //   if (!ret) {  console.log("registration failed");}
+	//
+  // 	  // Check whether a shortcut is registered.
+  //    console.log(globalShortcut.isRegistered(tempkey));
+	// });
 
 
 }
