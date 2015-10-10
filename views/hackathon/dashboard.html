@@ -7,7 +7,22 @@
 	</canvas>
     </div>
 
-    <div class="col-md-6">
-        test
+    <div class="col-md-12">
+        <h2>Breaks</h2>
+        <hr>
+        <div class="list-group" ng-repeat="break in breaks">
+		    <div class="list-group-item">
+		        <div class="row-action-primary">
+		            <i class="mdi-file-folder"></i>
+		        </div>
+		        <div class="row-content">
+		            <div class="least-content">{{ break.time }} ago</div>	
+		            <h4 class="list-group-item-heading">{{ break.title }}</h4>
+		            <p class="list-group-item-text">{{ break.description }}</p>
+		        </div>
+		    </div>
+		    <div class="list-group-separator"></div>
+		</div>
+
     </div>
 </div>
