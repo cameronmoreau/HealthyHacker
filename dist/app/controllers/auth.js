@@ -1,17 +1,27 @@
 (function() {
     'use strict';
 
-    var app = angular.module('controller.auth', []);
+    var app = angular.module('controller.auth', ['ui.bootstrap']);
 
-    app.controller('LoginController', function($scope, Azureservice) {
-        
+    app.controller('LoginController', function($scope, $modalInstance) {
         var myEl = angular.element(document.querySelector('#passwordField'));
-
 
         $scope.user = {
             email: '',
             password: '',
             role:'developer'
+        }
+
+        $scope.cancel = function() {
+            $modalInstance.dismiss('cancel');
+        }
+
+        $scope.login = function() {
+            console.log('login');
+            //Auth.login($scope.user.email, $scope.user.password);
+
+            //console.log($scope.user.email);
+            //console.log($scope.user.password);
         }
 
         $scope.check = function() {
@@ -21,19 +31,6 @@
             if ($scope.user.email && $scope.user.password.length > 0) {
                 //validation code here
             }
-        }
-
-        $scope.login = function() {
-            //Auth.login($scope.user.email, $scope.user.password);
-            Azureservice.login('aad')
-                .then(function() {
-                    console.log('Login successful');
-                }, function(err) {
-                    console.error('Azure Error: ' + err);
-                });
-
-            //console.log($scope.user.email);
-            //console.log($scope.user.password);
         }
 
 
@@ -50,7 +47,7 @@
             var passwordEl = angular.element(document.querySelector('.input-password'));
 
             var valid = true;
-            
+
 
 
             // YEAH THIS CODE SUCKS I'M TIRED AND I'M SORRY
@@ -59,14 +56,14 @@
                 valid = false;
             }
             else{
-                firstNameEl.removeClass('has-error');   
+                firstNameEl.removeClass('has-error');
             }
             if(!lastName){
                 lastNameEl.addClass('has-error');
                 valid = false;
             }
             else{
-                lastNameEl.removeClass('has-error');   
+                lastNameEl.removeClass('has-error');
             }
             if(!password){
                 passwordEl.addClass('has-error');

@@ -9,7 +9,8 @@ var lastMouse = {x :0 , y:0};
 
 exports.shortCuts = function(){
 
-	// map input shortcut with list data
+
+/*	// map input shortcut with list data
 	_.each(list, function(item) {
 		var tempkey = item["key"];
 		var ret = globalShortcut.register(tempkey, function() {
@@ -26,7 +27,7 @@ exports.shortCuts = function(){
   	  // Check whether a shortcut is registered.
 
      // console.log(globalShortcut.isRegistered(tempkey));
-	});
+	});*/
 
 
 }
@@ -51,7 +52,7 @@ exports.mouse = function(){
   setInterval(function(){
   	 console.log("mouse");
       console.log(mouseList.score(list));
-      list = [];  
+      list = [];
 
   },3000);
 
