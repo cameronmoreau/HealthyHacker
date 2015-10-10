@@ -7,6 +7,7 @@ $sidebar-width: 200px;
 $sidebar-width-collapse: 60px;
 $color-background: #eee;
 $color-sidebar: #31323A;
+$color-sidebar-highlight: #3C3D47;
 $color-highlight: #F75163;
 
 html, body {
@@ -28,6 +29,8 @@ body {
 	-webkit-overflow-scrolling: touch;
 	background: $color-background;
 }
+
+.control-label { float:left; }
 
 .well .title > div, h3, p {
 	display: inline-block;
@@ -53,12 +56,6 @@ body {
 	font-size: 26px;
 	padding-top: 12px;
 	vertical-align: middle;
-}
-
-//PRojects
-.project-box {
-	//padding: ;
-
 }
 
 /* SIDE BAR */
@@ -134,7 +131,7 @@ body {
 }
 
 .sidebar-nav li.active a, .sidebar-nav li.active a:hover {
-	color: $color-highlight;
+	color: $color-sidebar-highlight;
 }
 
 .sidebar-nav li a {
@@ -164,14 +161,25 @@ body {
 }
 
 .sidebar-nav > .sidebar-back {
-	height: 28px;
-	font-size: 14px;
-	line-height: 22px;
-}
+	font-size: 18px;
+	text-align: left;
 
-.sidebar-nav > .sidebar-back a {
-	background: $color-highlight;
-	color: #fff;
+	i { margin-top: 3px; width: 24px }
+
+	i:before {
+		margin: -18px 0 0 -15px;
+		display: block;
+		position: absolute;
+	}
+
+	a {
+		background: $color-sidebar-highlight;
+		color: #A7ABC6;
+	}
+
+	a:hover {
+		background: #18191D;
+	}
 }
 
 .sidebar-nav > .sidebar-brand {
