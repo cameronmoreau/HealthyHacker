@@ -9,12 +9,11 @@ var lastMouse = {x :0 , y:0};
 exports.shortCuts = function(){
 
 
-
 	// map input shortcut with list data
 	_.each(list, function(item) {
 		var tempkey = item["key"];
 		var ret = globalShortcut.register(tempkey, function() {
-			console.log(tempkey);
+      console.log("key");
 			console.log(item["score"]);
 			//free the key
 			globalShortcut.unregister(tempkey);
@@ -25,7 +24,7 @@ exports.shortCuts = function(){
     if (!ret) {  console.log("registration failed");}
 
   	  // Check whether a shortcut is registered.
-     console.log(globalShortcut.isRegistered(tempkey));
+     // console.log(globalShortcut.isRegistered(tempkey));
 	});
 
 
@@ -36,17 +35,24 @@ exports.shortCuts = function(){
 exports.mouse = function(){
   var electronScreen = require('screen');
   var list = [];
-  // var score = 0;
-  // setInterval(function(){
-  // 	var currentMouse = electronScreen.getCursorScreenPoint();
-  // 	list.push(mouseList.calculate(currentMouse,lastMouse));
-  // 	lastMousen = currentMouse;
 
-  // },2000);
-  // setInterval(function(){
-  // 	_.each(list,function(item){
-  // 		console.log(mouseList.getScore(item));
-  // 	});
-  // },6000);
+  setInterval(function(){
+
+  	var currentMouse = electronScreen.getCursorScreenPoint();
+  	var res = mouseList.distance(currentMouse,lastMouse);
+
+  	list.push(res);
+  	// console.log(res);
+  	lastMouse = currentMouse;
+
+  },50);
+
+  setInterval(function(){
+  	 console.log("mouse");
+      console.log(mouseList.score(list));
+      list = [];  
+
+  },3000);
+
 
 }
