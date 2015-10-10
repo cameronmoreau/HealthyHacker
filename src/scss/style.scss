@@ -7,8 +7,9 @@ $sidebar-width: 200px;
 $sidebar-width-collapse: 60px;
 $color-background: #eee;
 $color-sidebar: #31323A;
-$color-sidebar-highlight: #3C3D47;
-$color-highlight: #F75163;
+//$color-sidebar-highlight: #;
+$color-sidebar-highlight: #2196F3;
+$color-highlight: #3C3D47;
 
 html, body {
 	width: 100%;
@@ -179,7 +180,7 @@ body {
 	}
 
 	a {
-		background: $color-sidebar-highlight;
+		background: $color-highlight;
 		color: #A7ABC6;
 	}
 
