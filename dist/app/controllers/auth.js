@@ -24,12 +24,33 @@
 
         $scope.login = function() {
             //Auth.login($scope.user.email, $scope.user.password);
-            Azureservice.login('aad')
-                .then(function() {
-                    console.log('Login successful');
+
+            Azureservice.query('productivity', {
+                })
+                .then(function(items) {
+                    // Assigin the results to a $scope variable
+                    $scope.items = items;
+                    console.log(items);
+
                 }, function(err) {
-                    console.error('Azure Error: ' + err);
+                    console.error('There was an error quering Azure ' + err);
                 });
+
+            // Azureservice.insert('productivity', {
+            //         level: 12
+            //     })
+            //     .then(function() {
+            //         console.log('Insert successful');
+            //     }, function(err) {
+            //         console.error('Azure Error: ' + err);
+            //     });
+
+            // Azureservice.login('aad')
+            //     .then(function() {
+            //         console.log('Login successful');
+            //     }, function(err) {
+            //         console.error('Azure Error: ' + err);
+            //     });
 
             //console.log($scope.user.email);
             //console.log($scope.user.password);

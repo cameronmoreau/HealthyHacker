@@ -1,24 +1,28 @@
-<h1>Hackathon Projects</h1>
+<div>
+    <h1 style="display:inline-block">Hackathon Projects</h1>
+    <button ng-click="addHackathon()" class="btn btn-primary" style="float:right; margin-top:25px">Add</button>
+</div>
 <div class="col-sm-6 project-box" ng-repeat="project in projects">
     <div class="well">
-        <div class="title">
-            <div class="row-picture">
-                <div class="circle circle-letter">
-                    {{ project.name[0] }}
+        <a ui-sref="hackathon.dashboard">
+            <div class="title">
+                <div class="row-picture">
+                    <div class="circle circle-letter">
+                        {{ project.name[0] }}
+                    </div>
+                    <!-- <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon"> -->
                 </div>
-                <!-- <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon"> -->
-            </div>
 
-            <div class="content">
-                <h3>{{ project.name }}</h3>
-                <div class="date"><strong>Date:</strong> {{project.date}}</div>
+                <div class="content">
+                    <h3>{{ project.name }}</h3>
+                    <div class="date">
+                        <strong>Date:</strong>
+                        {{project.date}}</div>
+                </div>
             </div>
         </div>
-    </div>
+    </a>
 </div>
-
-
-
 
 <a ui-sref="hackathon.dashboard">test code</a>
 <a ui-sref="login">test Login</a>
