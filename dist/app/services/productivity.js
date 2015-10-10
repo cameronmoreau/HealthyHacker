@@ -6,8 +6,8 @@
         var pData = [];
 
         return {
-            addProductivity: function(data) {
-                pData.append(data);
+            addProductivity: function(time, data) {
+                pData.append({ time: time, data: data });
             },
             getProductivity: function() {
                 return pData;

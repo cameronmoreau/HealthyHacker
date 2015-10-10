@@ -1,8 +1,9 @@
 'use strict'
 var _ = require('underscore');
-var globalShortcut = require('global-shortcut');
-var data = require('./models/shortcuts');
-var list = data.get();
+// var globalShortcut = require('global-shortcut');
+ var data = require('./models/shortcuts');
+ var mouse = require('./models/mouse');
+//var list = data.get();
 
 var mouseList = require('./models/mouse');
 var lastMouse = {x :0 , y:0};
@@ -32,7 +33,14 @@ exports.shortCuts = function(){
 
 }
 
+exports.getMouse = function() {
+    var currentMouse = require('screen').getCursorScreenPoint();
+    return mouseList.distance(currentMouse,lastMouse);
+};
 
+exports.getScore = function(list) {
+    return mouse.score(list);
+}
 
 exports.mouse = function(){
   var electronScreen = require('screen');
@@ -50,8 +58,7 @@ exports.mouse = function(){
   },50);
 
   setInterval(function(){
-  	 console.log("mouse");
-      console.log(mouseList.score(list));
+      return mouse.score(list);
       list = [];
 
   },3000);
