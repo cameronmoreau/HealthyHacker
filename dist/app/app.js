@@ -3,7 +3,7 @@
 
     var app = angular.module('HealthyHacker', [
         'ui.router',
-        'controller.home', 'controller.auth', 'controller.hackathon',
+        'controller.home', 'controller.auth', 'controller.hackathon', 'controller.task',
         'service.parse', 'service.auth',
     ]);
 
@@ -56,6 +56,12 @@
             url: '/login',
             templateUrl: './auth/login.html',
             controller: 'LoginController'
+        })
+
+        .state('task',{
+            url: '/task',
+            templateUrl: './activity/task.html',
+            controller:'TaskController'
         });
 
         // .state('main.apps', {
