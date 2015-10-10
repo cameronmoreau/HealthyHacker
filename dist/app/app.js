@@ -5,7 +5,7 @@
         'ui.router',
 
         'controller.home', 'controller.auth', 'controller.hackathon',
-        'service.auth'
+       
     ]);
 
     app.config(function($stateProvider, $urlRouterProvider) {
