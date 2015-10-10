@@ -7,13 +7,14 @@
         $scope.datetime = ["10/10/2015 14:00", "10/10/2015 14:30", "10/10/2015 15:00", "10/10/2015 15:30",
             "10/10/2015 16:00", "10/10/2015 16:30", "10/10/2015 17:00"
         ];
-        $scope.series = ['TAMUHack', 'sdfdsf'];
+        $scope.series = ['Productivity', 'sdfdsf'];
         $scope.productivityLevel = [
             [65, 59, 80, 81, 56, 55, 40]
         ];
         $scope.onClick = function(points, evt) {
             console.log(points, evt);
         };
+
 
         $scope.breaks = [{
             time: '10 min',
@@ -45,5 +46,4 @@
 	app.controller('EventController', function($scope) {
 
 	});
-
 })();

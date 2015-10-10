@@ -1,23 +1,27 @@
-<form class="form-horizontal" padding="10px">
-    <fieldset style="padding:10px">
-        <div class="form-group" >
-            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
-            <div class="col-lg-10">
-                <input type="email" class="form-control" ng-model="user.email" ng-change="checkEmail()" id="inputEmail" placeholder="Email">
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="inputEmail" class="col-lg-2 control-label">Password</label>
-            <div class="col-lg-10">
-                <input type="password" class="form-control"  ng-model="user.password"  id="inputEmail" placeholder="Password">
-            </div>
-        </div>
+<div class="modal-header">
+    <h3 class="modal-title">Login</h3>
+</div>
 
-        <div class="form-group">
-        <center>
-                <a class="btn btn-default" ui-sref="main.home">Cancel</a>
-                <button type="submit" id="passwordField" class="btn btn-primary " ng-click="login()">Submit</button>
+<div class="modal-body">
+    <form class="form-horizontal" padding="10px">
+        <fieldset style="padding:10px">
+            <div class="form-group">
+                <label class="col-lg-2 control-label" for="inputEmail">Email</label>
+                <div class="col-lg-10">
+                    <input class="form-control" id="inputEmail" ng-change="checkEmail()" ng-model="user.email" placeholder="Email" type="email">
+                </div>
             </div>
-        </div>
-    </fieldset>
-</form>
+            <div class="form-group">
+                <label class="col-lg-2 control-label" for="inputEmail">Password</label>
+                <div class="col-lg-10">
+                    <input class="form-control" id="inputEmail" ng-model="user.password" placeholder="Password" type="password">
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+<div class="modal-footer">
+    <button class="btn btn-default" ng-click="cancel()">Cancel</button>
+    <button class="btn btn-primary" ng-click="login()">Submit</button>
+</div>
