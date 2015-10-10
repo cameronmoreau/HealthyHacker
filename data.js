@@ -53,7 +53,7 @@ exports.mouse = function(){
   setInterval(function(){
   	 console.log("mouse");
       console.log(mouseList.score(list));
-      list = [];  
+      list = [];
 
   },3000);
 

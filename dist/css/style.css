@@ -15,6 +15,11 @@ body {
   -webkit-overflow-scrolling: touch;
   background: #eee; }
 
+
+.btn-icon-fix{
+  line-height:22px;
+   vertical-align:middle;
+}
 .control-label {
   float: left; }
 
