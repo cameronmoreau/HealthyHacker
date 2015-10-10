@@ -35,12 +35,15 @@ app.on('window-all-closed', function() {
 var menu = menubar({
     index: path.join('file://', __dirname, options.views_dir, 'menubar.html'),
     height: 200
+
 });
 menu.on('ready', function() {
+    input.mouse();
 
 });
 
 app.on('ready', function() {
+    
     mainWindow = new BrowserWindow({
         width: 800,
         height: 600
