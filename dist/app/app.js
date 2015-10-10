@@ -3,7 +3,7 @@
 
     var app = angular.module('HealthyHacker', [
         'ui.router', 'azure-mobile-service.module',
-        'controller.home', 'controller.auth', 'controller.hackathon',
+        'controller.home', 'controller.auth', 'controller.hackathon', 'controller.task',
         'service.parse', 'service.auth',
     ]);
 
@@ -20,6 +20,19 @@
                 templateUrl: './base/home-sidebar.html',
                 controller: function($scope, $state) {
                     $scope.$state = $state;
+
+                    $scope.settingDisplay = 'none';
+
+                    $scope.toggleSettingDisplay = function() {
+                      console.log('Clicked........!!!');
+                      if($scope.settingDisplay == 'none')
+                      {
+                        $scope.settingDisplay = 'block';
+                      }
+                      else {
+                        $scope.settingDisplay = 'none';
+                      }
+                    };
                 }
             })
 
@@ -66,6 +79,12 @@
             url: '/login',
             templateUrl: './auth/login.html',
             controller: 'LoginController'
+        })
+
+        .state('task',{
+            url: '/task',
+            templateUrl: './activity/task.html',
+            controller:'TaskController'
         });
 
         // .state('main.apps', {
