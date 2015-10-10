@@ -7,7 +7,7 @@
 	</canvas>
     </div>
 
-    <div class="col-md-8">
+    <div class="col-sm-8">
         <h2>Breaks</h2>
         <hr>
         <div class="list-group" ng-repeat="break in breaks">
@@ -16,7 +16,7 @@
 		            <i class="mdi-file-folder"></i>
 		        </div>
 		        <div class="row-content">
-		            <div class="least-content">{{ break.time }} ago</div>	
+		            <div class="least-content">{{ break.time }} ago</div>
 		            <h4 class="list-group-item-heading">{{ break.title }}</h4>
 		            <p class="list-group-item-text">{{ break.description }}</p>
 		        </div>
@@ -26,7 +26,7 @@
 
     </div>
 
-    <div class="col-md-4">
+    <div class="col-sm-4">
         <div id="increased-productivity-percent"></div>
     	<script type="text/javascript">
     		var circle = new ProgressBar.Circle('#increased-productivity-percent', {
