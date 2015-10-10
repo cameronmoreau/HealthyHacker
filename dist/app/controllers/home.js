@@ -102,7 +102,7 @@
                 };
                 $scope.projects.push($scope.tempProj)
                 console.log( $scope.projects);
-                $scope.$apply();
+                
             }
             else{
                // alert('error');
