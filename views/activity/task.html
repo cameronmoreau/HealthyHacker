@@ -1,49 +1,38 @@
+<html>
+<head>
+    <title>Healthy Hacker</title>
+    <link rel="stylesheet" href="../dist/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../dist/vendor/font-awesome/css/font-awesome.min.css">
+
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../dist/vendor/angular-chart.js/dist/angular-chart.css" />
+    <link rel="stylesheet" href="../dist/vendor/bootstrap-material-design/dist/css/material.css" />
+    <link rel="stylesheet" href="../dist/vendor/bootstrap-material-design/dist/css/ripples.css" />
+    <!-- endbower -->
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="../dist/css/style.css">
+
+    <script src="../dist/vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+  </head>
 <div class="col-sm-12">
-<h1 class="text-center"> Activity Name </h1>
-<h4 class="text-center"> {{task}}</h4>
-<hr style="background-color:#C8C8C8;">
-<h2> Activity description ( {walk 1000 steps} )</h2>
-</div>
-
-<div class="col-sm-6">
-<div style="height:300px; width:300px; margin:0 auto;">
-<canvas id="doughnut" class="chart chart-doughnut"
-  chart-data="data" chart-labels="labels" style ="height:300px; width:300px;">
-</canvas>
-</div>
+<h1 class="text-center"> {{activity}}  for </h1>
+<h2 class="text-center"> {{time}} </h2>
 
 </div>
 
-<div class="col-sm-6">
+<div>
 
-<div class="icon-preview"><i class="mdi-maps-directions-walk"></i><span></span>
-Hacker1 1000/10000 steps
-</div>
-<div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
-    <span class="sr-only">60% Complete</span>
-  </div>
+
+<center><textarea type="text" ng-model="thot" style="width:80%;"> </textarea></center>
 </div>
 
-<div class="row-picture">
+<a href="javascript:void(0)" class="btn btn-info" style="float:right; margin-right:100px" ng-click="saveThot()">Info</a>
 
-            <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
-Hacker 2 2000/10000 steps
 
-        </div>
-<div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
-    <span class="sr-only">60% Complete</span>
-  </div>
-</div>
 
-<div class="icon-preview"><i class="mdi-maps-directions-walk"></i><span></span>
-Hacker 3 6000/10000 steps
-</div>
-<div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-    <span class="sr-only">60% Complete</span>
-  </div>
-</div>
 
 </div>
+
+</html>
