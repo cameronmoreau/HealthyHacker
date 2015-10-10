@@ -3,7 +3,7 @@
 
     var app = angular.module('controller.auth', []);
 
-    app.controller('LoginController', function($scope, Azureservice) {
+    app.controller('LoginController', function($scope) {
 
         var myEl = angular.element(document.querySelector('#passwordField'));
 
