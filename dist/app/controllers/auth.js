@@ -36,6 +36,7 @@
             //console.log($scope.user.password);
         }
 
+
         $scope.register = function(){
             var firstName = $scope.user.firstName;
             var lastName = $scope.user.lastName;
@@ -43,10 +44,46 @@
             var password = $scope.user.password;
             var role = $scope.user.role;
 
-            if(!firstName || !lastName|| !email || !password || !role){
-                alert('error');
+            var firstNameEl = angular.element(document.querySelector('.input-first-name'));
+            var lastNameEl = angular.element(document.querySelector('.input-last-name'));
+            var emailEl = angular.element(document.querySelector('.input-email'));
+            var passwordEl = angular.element(document.querySelector('.input-password'));
+
+            var valid = true;
+            
+
+
+            // YEAH THIS CODE SUCKS I'M TIRED AND I'M SORRY
+            if(!firstName){
+                firstNameEl.addClass('has-error');
+                valid = false;
             }
             else{
+                firstNameEl.removeClass('has-error');   
+            }
+            if(!lastName){
+                lastNameEl.addClass('has-error');
+                valid = false;
+            }
+            else{
+                lastNameEl.removeClass('has-error');   
+            }
+            if(!password){
+                passwordEl.addClass('has-error');
+                valid = false;
+            }
+            else{
+                passwordEl.removeClass('has-error');
+            }
+            if(!email){
+                emailEl.addClass('has-error');
+                valid = false;
+            }
+            else{
+                emailEl.removeClass('has-error');
+            }
+
+            if(valid){
                 // register here
             }
 
@@ -57,7 +94,6 @@
                 role);
         }
         $scope.changeDropDown = function(role){
-            
             $scope.user.role = role;
         }
 
