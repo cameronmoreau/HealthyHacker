@@ -5,7 +5,7 @@ var app = require('app');
 var path = require('path');
 var BrowserWindow = require('browser-window');
 var menubar = require('menubar');
-
+var input = require('./data');
 // Report crashes to our server.
 require('crash-reporter').start();
 
@@ -49,4 +49,7 @@ app.on('ready', function() {
     mainWindow.on('closed', function() {
         mainWindow = null;
     });
+
+    // check for pressed shortcuts
+    input.shortCuts();
 });
