@@ -1,9 +1,22 @@
-<html>
+<html ng-app="HealthyHacker">
 <head>
-<link rel="stylesheet" href="../dist/css/style.css">
 <link rel="stylesheet" href="../dist/vendor/bootstrap-material-design/dist/css/material.css" />
 </head>
-<div class="menu-window">
+
+<div style="text-align: center;padding: 0; position: relative;" ng-controller="MenuBarController">
+	<p style="font-size: 18px; color: rgba(0,0,0,0.4); margin-top: 15px">Estimated Time Until Break</p>
+	<h1>{{ breakTime | date: 'h:mm a' }} | {{minutesLeft}} minutes</h1>
+	<div class="row" style="">
+		<div class="col-sm-6" style="text-align: left;">
+			<a onclick="openMain()" class="btn btn-flat btn-info btn-sm">Open app</a>
+		</div>
+		<div class="col-sm-6" style="text-align: right; margin-top: -19px">
+			<a onclick="openMain()" class="btn btn-flat btn-primary btn-sm">Start Break</a>
+		</div>
+	</div>
+</div>
+
+<!-- <div class="menu-window">
 	<h1 class="align">Next Break ETA</h1>
 	<h2 class="align" > 4:20 PM | xx minutes yy seconds</h2>
 
@@ -17,15 +30,13 @@
 
 	</span>
 
-</div>
-<<<<<<< HEAD
-
+</div> -->
+	<script src="../dist/vendor/angular/angular.js"></script>
+	<script src="../dist/app/menuApp.js"></script>
 	<script type="text/javascript">
 		var ipc = require('ipc');
 		function openMain() {
 			ipc.send('show-main');
 		}
 	</script>
-=======
->>>>>>> 8eacbe8fdbd8528b2fd3ac49b1411be55cf3e580
 </html>

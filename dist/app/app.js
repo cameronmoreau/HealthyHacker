@@ -51,6 +51,12 @@
             controller: 'ProjectsController'
         })
 
+        .state('main.settings', {
+            url: '/settings',
+            templateUrl: './home/settings.html',
+            controller: 'SettingsController'
+        })
+
         .state('hackathon.dashboard', {
             url: '/dashboard',
             templateUrl: './hackathon/dashboard.html',
@@ -85,6 +91,12 @@
             url: '/task',
             templateUrl: './activity/task.html',
             controller:'TaskController'
+        })
+        
+       .state('register',{
+        url: '/register',
+        templateUrl: './auth/register.html',
+        controller:'LoginController'
         });
 
         // .state('main.apps', {

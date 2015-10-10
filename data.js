@@ -9,6 +9,8 @@ var lastMouse = {x :0 , y:0};
 exports.shortCuts = function(){
 
 
+
+
 	// map input shortcut with list data
 	_.each(list, function(item) {
 		var tempkey = item["key"];
@@ -24,6 +26,7 @@ exports.shortCuts = function(){
     if (!ret) {  console.log("registration failed");}
 
   	  // Check whether a shortcut is registered.
+
      // console.log(globalShortcut.isRegistered(tempkey));
 	});
 
