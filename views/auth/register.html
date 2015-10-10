@@ -3,8 +3,8 @@
     <fieldset style="padding:10px">
 
 
-    <h3>preferred role:
-    <div class="btn-group">
+    preferred role:
+    <div class="btn-group" >
         
         <div class="btn-group">
             <a href="bootstrap-elements.html" data-target="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -18,29 +18,28 @@
             </ul>
         </div>
     </div>
-    </h3>
         
-        <div class="form-group" >
+        <div class="form-group input-first-name" >
             <label for="inputFirstName" class="col-lg-2 control-label">First name</label>
             <div class="col-lg-10">
                 <input type="text" class="form-control" ng-model="user.firstName" id="inputFirstName" placeholder="First Name">
             </div>
         </div>
 
-        <div class="form-group" >
+        <div class="form-group input-last-name" >
             <label for="inputLastName" class="col-lg-2 control-label">Last Name</label>
             <div class="col-lg-10">
                 <input type="text" class="form-control" ng-model="user.lastName" id="inputLastName" placeholder="Last Name">
             </div>
         </div>
 
-        <div class="form-group" >
+        <div class="form-group input-email" >
             <label for="inputEmail" class="col-lg-2 control-label">Email</label>
             <div class="col-lg-10">
                 <input type="email" class="form-control" ng-model="user.email" ng-change="checkEmail()" id="inputEmail" placeholder="Email">
             </div>
         </div>
-        <div class="form-group">
+        <div class="form-group input-password">
             <label for="inputEmail" class="col-lg-2 control-label">Password</label>
             <div class="col-lg-10">
                 <input type="password" class="form-control"  ng-model="user.password"  id="inputEmail" placeholder="Password">
@@ -49,8 +48,8 @@
 
         <div class="form-group">
         <center>
-                <a class="btn btn-default" ui-sref="main.home">Cancel</a>
-                <button type="submit" id="passwordField" class="btn btn-primary " ng-click="register()">Submit</button>
+            <a class="btn btn-default" ui-sref="main.home">Cancel</a>
+            <button type="submit" id="passwordField" class="btn btn-primary " ng-click="register()">Submit</button>
             </div>
         </div>
     </fieldset>
