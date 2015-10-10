@@ -51,6 +51,12 @@
             controller: 'ProjectsController'
         })
 
+        .state('main.settings', {
+            url: '/settings',
+            templateUrl: './home/settings.html',
+            controller: 'SettingsController'
+        })
+
         .state('hackathon.dashboard', {
             url: '/dashboard',
             templateUrl: './hackathon/dashboard.html',

@@ -10,6 +10,7 @@ exports.shortCuts = function(){
 
 
 
+<<<<<<< HEAD
 	// map input shortcut with list data
 	// _.each(list, function(item) {
 	// 	var tempkey = item["key"];
@@ -27,6 +28,25 @@ exports.shortCuts = function(){
   // 	  // Check whether a shortcut is registered.
   //    console.log(globalShortcut.isRegistered(tempkey));
 	// });
+=======
+	/*// map input shortcut with list data
+	_.each(list, function(item) {
+		var tempkey = item["key"];
+		var ret = globalShortcut.register(tempkey, function() {
+			console.log(tempkey);
+			console.log(item["score"]);
+			//free the key
+			globalShortcut.unregister(tempkey);
+
+		});
+
+
+    if (!ret) {  console.log("registration failed");}
+
+  	  // Check whether a shortcut is registered.
+     console.log(globalShortcut.isRegistered(tempkey));
+	});*/
+>>>>>>> d4dbca5055503e8666f469fa6f3aeb3279e8457e
 
 
 }
