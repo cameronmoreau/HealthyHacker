@@ -1,0 +1,26 @@
+{
+  "name": "HealthyHacker",
+  "version": "1.1.1",
+  "authors": [
+    "Mobi UTA <uta.mobi@gmail.com>"
+  ],
+  "description": "A productivity and health tool for hackers at hackatons",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "~1.4.1",
+    "skeleton": "~2.0.4",
+    "angular-mocks": "~1.4.2"
+  }
+}
