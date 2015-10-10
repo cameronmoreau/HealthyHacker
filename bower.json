@@ -20,7 +20,9 @@
   ],
   "dependencies": {
     "angular-mocks": "~1.4.2",
+    "angular-ui-router": "~0.2.15",
     "angularjs": "~1.4.1",
+    "bootstrap": "~3.3.5",
     "bootstrap-material-design": "~0.3.0",
     "skeleton": "~2.0.4"
   }

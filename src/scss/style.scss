@@ -3,6 +3,11 @@
 @import 'includes/nav';
 @import 'includes/footer';
 
+$sidebar-width: 200px;
+$color-background: #f8f8f8;
+$color-sidebar: #31323A;
+$color-highlight: #F75163;
+
 html, body {
 	width: 100%;
 	height: 100%;
@@ -22,3 +27,145 @@ body {
 	-webkit-overflow-scrolling: touch;
 	background: #fff;
 }
+
+
+
+/* SIDE BAR */
+#wrapper {
+	padding-left: 0;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+	padding-left: $sidebar-width;
+}
+
+#sidebar-wrapper {
+	z-index: 1000;
+	position: fixed;
+	left: $sidebar-width;
+	width: 0;
+	height: 100%;
+	margin-left: -$sidebar-width;
+	overflow-y: auto;
+	background: $color-sidebar;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+	width: $sidebar-width;
+}
+
+#page-content-wrapper {
+	width: 100%;
+	position: absolute;
+	padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+	position: absolute;
+	margin-right: -$sidebar-width;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+	position: absolute;
+	top: 0;
+	width: $sidebar-width;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sidebar-nav li {
+	text-indent: 20px;
+	line-height: 40px;
+}
+
+.sidebar-nav li.active {
+	//background: #F8F8F8;
+}
+
+.sidebar-nav li.active a, .sidebar-nav li.active a:hover {
+	color: $color-highlight;
+}
+
+.sidebar-nav li a {
+	display: block;
+	text-decoration: none;
+	color: #999999;
+}
+
+.sidebar-nav li a .fa {
+	text-indent: 0;
+	margin-right: 10px;
+}
+
+.sidebar-nav li a:hover {
+	text-decoration: none;
+	color: #fff;
+	background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+	text-decoration: none;
+}
+
+.sidebar-nav .btn {
+	margin: 0 15px;
+}
+
+.sidebar-nav > .sidebar-back {
+	height: 28px;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.sidebar-nav > .sidebar-back a {
+	background: $color-highlight;
+	color: #fff;
+}
+
+.sidebar-nav > .sidebar-brand {
+	height: 65px;
+	font-size: 18px;
+	line-height: 60px;
+	color: #fff;
+	background: none;
+}
+
+/*@media(min-width:768px) {*/
+	#wrapper {
+		padding-left: $sidebar-width;
+	}
+
+	#wrapper.toggled {
+		padding-left: 0;
+	}
+
+	#sidebar-wrapper {
+		width: $sidebar-width;
+	}
+
+	#wrapper.toggled #sidebar-wrapper {
+		width: 0;
+	}
+
+	#page-content-wrapper {
+		padding: 20px;
+		position: relative;
+	}
+
+	#wrapper.toggled #page-content-wrapper {
+		position: relative;
+		margin-right: 0;
+	}
+/*}*/
