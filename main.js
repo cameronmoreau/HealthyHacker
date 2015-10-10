@@ -5,6 +5,8 @@ var app = require('app');
 var path = require('path');
 var BrowserWindow = require('browser-window');
 var menubar = require('menubar');
+var Parse = require('parse/node').Parse;
+
 
 //var robot = require("robotjs");
 
@@ -41,9 +43,12 @@ menu.on('ready', function() {
     input.mouse();
     input.shortCuts();
 
-
-
 });
+
+
+
+ 
+
 
 app.on('ready', function() {
 

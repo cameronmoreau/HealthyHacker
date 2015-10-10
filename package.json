@@ -55,6 +55,7 @@
   "dependencies": {
     "jquery": "^2.1.4",
     "menubar": "^2.2.1",
+    "node-parse-api": "^0.3.8",
     "robotjs": "^0.3.0",
     "underscore": "^1.8.3"
   },
