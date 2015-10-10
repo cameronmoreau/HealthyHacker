@@ -5,7 +5,7 @@ var data = require('./models/shortcuts');
 var list = data.get();
 exports.shortCuts = function(){
 
-	
+
 
 	// map input shortcut with list data
 	_.each(list, function(item) {
@@ -18,17 +18,17 @@ exports.shortCuts = function(){
 
 		});
 
-    
+
     if (!ret) {  console.log("registration failed");}
 
   	  // Check whether a shortcut is registered.
-     console.log(globalShortcut.isRegistered(tempkey));		
+     console.log(globalShortcut.isRegistered(tempkey));
 	});
-   
+
 
 }
 
-    
+
 
 exports.mouse = function(){
   var electronScreen = require('screen');
