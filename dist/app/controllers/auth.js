@@ -3,7 +3,7 @@
 
     var app = angular.module('controller.auth', []);
 
-    app.controller('LoginController', function($scope) {
+    app.controller('LoginController', function($scope, Azureservice) {
 
         var myEl = angular.element(document.querySelector('#passwordField'));
 
@@ -13,12 +13,6 @@
             password: ''
         }
 
-
-
-        $scope.login = function() {
-            console.log($scope.user.email);
-            console.log($scope.user.password);
-        }
         $scope.check = function() {
             console.log($scope.user.password.length);
             console.log($scope.user.email);
@@ -29,7 +23,14 @@
         }
 
         $scope.login = function() {
-            Auth.login($scope.user.email, $scope.user.password);
+            //Auth.login($scope.user.email, $scope.user.password);
+            Azureservice.login('aad')
+                .then(function() {
+                    console.log('Login successful');
+                }, function(err) {
+                    console.error('Azure Error: ' + err);
+                });
+
             //console.log($scope.user.email);
             //console.log($scope.user.password);
         }

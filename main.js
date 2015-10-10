@@ -58,7 +58,4 @@ app.on('ready', function() {
     mainWindow.on('closed', function() {
         mainWindow = null;
     });
-
-    //console.log(robot.getMousePos());
-    // check for pressed shortcuts
 });

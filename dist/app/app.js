@@ -2,10 +2,15 @@
     'use strict';
 
     var app = angular.module('HealthyHacker', [
-        'ui.router',
-        'controller.home', 'controller.auth', 'controller.hackathon',
+        'ui.router', 'azure-mobile-service.module',
+        'controller.home', 'controller.auth', 'controller.hackathon', 'controller.task',
         'service.parse', 'service.auth',
     ]);
+
+    app.constant('AzureMobileServiceClient', {
+        API_URL : 'https://healthyhacker.azure-mobile.net/',
+        API_KEY : 'VkvNyvdkRwpECMklMrvxrUptiUZPOb83',
+    });
 
     app.config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
@@ -15,6 +20,19 @@
                 templateUrl: './base/home-sidebar.html',
                 controller: function($scope, $state) {
                     $scope.$state = $state;
+
+                    $scope.settingDisplay = 'none';
+
+                    $scope.toggleSettingDisplay = function() {
+                      console.log('Clicked........!!!');
+                      if($scope.settingDisplay == 'none')
+                      {
+                        $scope.settingDisplay = 'block';
+                      }
+                      else {
+                        $scope.settingDisplay = 'none';
+                      }
+                    };
                 }
             })
 
@@ -39,10 +57,34 @@
             controller: 'DashboardController'
         })
 
+        .state('hackathon.team', {
+            url: '/team',
+            templateUrl: './hackathon/team.html',
+            controller: 'TeamController'
+        })
+
+        .state('hackathon.settings', {
+            url: '/settings',
+            templateUrl: './hackathon/settings.html',
+            controller: 'SettingsController'
+        })
+
+        .state('hackathon.event', {
+            url: '/event',
+            templateUrl: './hackathon/event.html',
+            controller: 'EventController'
+        })
+
         .state('login', {
             url: '/login',
             templateUrl: './auth/login.html',
             controller: 'LoginController'
+        })
+
+        .state('task',{
+            url: '/task',
+            templateUrl: './activity/task.html',
+            controller:'TaskController'
         });
 
         // .state('main.apps', {
