@@ -5,7 +5,7 @@
 
 	app.controller('TaskController', function($scope,Task) {
 		var score = 5;
-	
+
 		if(score >= 0 && score <=2)
 			$scope.task = Task.getTask("bad")[0];
 		else if (score >2 && score <7)
@@ -19,6 +19,21 @@
 		'just do it'];
 
 		console.log(Math.random()*2)
+
+
+		
+		
+
+		$scope.activity = 'ACTIVITY GOES HERE';
+		$scope.time = new Date();
+
+		var userInput = $scope.thot;
+
+		$scope.saveThot = function(){
+			//console.log($scope.thot);
+			localStorage.setItem('thot',$scope.thot);
+		}
+		console.log($scope.activity);
 		var ran = Math.floor(Math.random()*(3-0))
 		console.log(ran);
 		console.log(quotes[ran]);
