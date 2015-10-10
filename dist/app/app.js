@@ -91,6 +91,12 @@
             url: '/task',
             templateUrl: './activity/task.html',
             controller:'TaskController'
+        })
+        
+       .state('register',{
+        url: '/register',
+        templateUrl: './auth/register.html',
+        controller:'LoginController'
         });
 
         // .state('main.apps', {
