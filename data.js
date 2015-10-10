@@ -6,10 +6,8 @@ var list = data.get();
 
 var mouseList = require('./models/mouse');
 var lastMouse = {x :0 , y:0};
+
 exports.shortCuts = function(){
-
-
-
 
 	// map input shortcut with list data
 	_.each(list, function(item) {
