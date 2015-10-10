@@ -3,7 +3,7 @@
 
     var app = angular.module('controller.auth', ['ui.bootstrap']);
 
-    app.controller('LoginController', function($scope, $modalInstance) {
+    app.controller('LoginController', function($scope, $modalInstance, Auth) {
         var myEl = angular.element(document.querySelector('#passwordField'));
 
         $scope.user = {
@@ -18,6 +18,13 @@
 
         $scope.login = function() {
             console.log('login');
+            Auth.login()
+                .then(function(user) {
+                    console.log(user)
+                })
+                .catch(function(error) {
+                    console.log(error);
+                });
             //Auth.login($scope.user.email, $scope.user.password);
 
             //console.log($scope.user.email);

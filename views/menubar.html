@@ -8,7 +8,7 @@
 	<h1>{{ breakTime | date: 'h:mm a' }} | {{minutesLeft}} minutes</h1>
 	<div class="row" style="">
 		<div class="col-sm-6" style="text-align: left;">
-			<a onclick="openMain()" class="btn btn-flat btn-info btn-sm">Open app</a>
+			<a ng-click="openMainWindow()" class="btn btn-flat btn-info btn-sm">Open app</a>
 		</div>
 		<div class="col-sm-6" style="text-align: right; margin-top: -19px">
 			<a onclick="openMain()" class="btn btn-flat btn-primary btn-sm">Start Break</a>
@@ -16,27 +16,6 @@
 	</div>
 </div>
 
-<!-- <div class="menu-window">
-	<h1 class="align">Next Break ETA</h1>
-	<h2 class="align" > 4:20 PM | xx minutes yy seconds</h2>
-
-	<hr style="padding:10px">
-	<span class= "bottom-bar">
-		<a onclick="openMain()" class="btn btn-info">Open</a>
-	</span>
-	<span class="bottom-bar right">
-
-		<a href="javascript:void(0)" class="btn btn-primary btn-fab btn-raised mdi-action-grade" style="height:1px; width:1px;"></a>
-
-	</span>
-
-</div> -->
 	<script src="../dist/vendor/angular/angular.js"></script>
 	<script src="../dist/app/menuApp.js"></script>
-	<script type="text/javascript">
-		var ipc = require('ipc');
-		function openMain() {
-			ipc.send('show-main');
-		}
-	</script>
 </html>
