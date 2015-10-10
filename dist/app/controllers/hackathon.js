@@ -15,6 +15,7 @@
             console.log(points, evt);
         };
 
+
         $scope.breaks = [{
             time: '10 min',
             title: 'Stand up and stretch',
@@ -45,5 +46,4 @@
 	app.controller('EventController', function($scope) {
 
 	});
-
 })();

@@ -38,8 +38,12 @@ body {
 	vertical-align: top;
 }
 
-.well .title .content {
+.well a:active, a:hover, a {
+	text-decoration: none;
+	color: #363636;
+}
 
+.well a .title .content {
 	h3 {
 		margin: 5px;
 	}
@@ -48,6 +52,9 @@ body {
 	}
 }
 
+.well a:hover .title .content {
+	color: rgba(0,0,0,0.6);
+}
 
 
 .circle {

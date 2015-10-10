@@ -2,15 +2,10 @@
     'use strict';
 
     var app = angular.module('HealthyHacker', [
-        'ui.router', 'azure-mobile-service.module',
+        'ui.router',
         'controller.home', 'controller.auth', 'controller.hackathon', 'controller.task',
         'service.parse', 'service.auth',
     ]);
-
-    app.constant('AzureMobileServiceClient', {
-        API_URL : 'https://healthyhacker.azure-mobile.net/',
-        API_KEY : 'VkvNyvdkRwpECMklMrvxrUptiUZPOb83',
-    });
 
     app.config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
