@@ -6,7 +6,6 @@ var path = require('path');
 var ipc = require('ipc');
 var BrowserWindow = require('browser-window');
 var menubar = require('menubar');
-var Parse = require('parse/node').Parse;
 
 
 //var robot = require("robotjs");

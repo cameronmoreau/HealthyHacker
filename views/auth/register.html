@@ -1,56 +1,60 @@
-<center><h1> Register </h1></center>
-<form class="form-horizontal" padding="10px">
-    <fieldset style="padding:10px">
+<div class="modal-header">
+    <h3 class="modal-title">Register</h3>
+</div>
+
+<div class="modal-body">
+    <form class="form-horizontal" padding="10px">
+        <fieldset style="padding:10px">
 
 
-    preferred role:
-    <div class="btn-group" >
+        preferred role:
+        <div class="btn-group" >
 
-        <div class="btn-group">
-            <a href="bootstrap-elements.html" data-target="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                {{user.role}}
-                <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-                <li><a href="javascript:void(0)" ng-click="changeDropDown('developer')">Developer</a></li>
-                <li><a href="javascript:void(0)" ng-click="changeDropDown('designer')">Designer</a></li>
-                <li><a href="javascript:void(0)" ng-click="changeDropDown('idea person')">Idea person</a></li>
-            </ul>
-        </div>
-    </div>
-
-        <div class="form-group input-first-name" >
-            <label for="inputFirstName" class="col-lg-2 control-label">First name</label>
-            <div class="col-lg-10">
-                <input type="text" class="form-control" ng-model="user.firstName" id="inputFirstName" placeholder="First Name">
+            <div class="btn-group">
+                <a href="bootstrap-elements.html" data-target="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    {{user.role}}
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="javascript:void(0)" ng-click="changeDropDown('developer')">Developer</a></li>
+                    <li><a href="javascript:void(0)" ng-click="changeDropDown('designer')">Designer</a></li>
+                    <li><a href="javascript:void(0)" ng-click="changeDropDown('idea person')">Idea person</a></li>
+                </ul>
             </div>
         </div>
 
-        <div class="form-group input-last-name" >
-            <label for="inputLastName" class="col-lg-2 control-label">Last Name</label>
-            <div class="col-lg-10">
-                <input type="text" class="form-control" ng-model="user.lastName" id="inputLastName" placeholder="Last Name">
+            <div class="form-group input-first-name" >
+                <label for="inputFirstName" class="col-lg-2 control-label">First name</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" ng-model="user.firstName" id="inputFirstName" placeholder="First Name">
+                </div>
             </div>
-        </div>
 
-        <div class="form-group input-email" >
-            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
-            <div class="col-lg-10">
-                <input type="email" class="form-control" ng-model="user.email" ng-change="checkEmail()" id="inputEmail" placeholder="Email">
+            <div class="form-group input-last-name" >
+                <label for="inputLastName" class="col-lg-2 control-label">Last Name</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" ng-model="user.lastName" id="inputLastName" placeholder="Last Name">
+                </div>
             </div>
-        </div>
-        <div class="form-group input-password">
-            <label for="inputEmail" class="col-lg-2 control-label">Password</label>
-            <div class="col-lg-10">
-                <input type="password" class="form-control"  ng-model="user.password"  id="inputEmail" placeholder="Password">
-            </div>
-        </div>
 
-        <div class="form-group">
-        <center>
-            <a class="btn btn-default" ui-sref="main.home" ng-click="cancel()">Cancel</a>
-            <button type="submit" id="passwordField" class="btn btn-primary " ng-click="register()">Submit</button>
+            <div class="form-group input-email" >
+                <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                <div class="col-lg-10">
+                    <input type="email" class="form-control" ng-model="user.email" ng-change="checkEmail()" id="inputEmail" placeholder="Email">
+                </div>
             </div>
-        </div>
-    </fieldset>
-</form>
+            <div class="form-group input-password">
+                <label for="inputEmail" class="col-lg-2 control-label">Password</label>
+                <div class="col-lg-10">
+                    <input type="password" class="form-control"  ng-model="user.password"  id="inputEmail" placeholder="Password">
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+</div>
+
+<div class="modal-footer">
+    <button class="btn btn-default" ng-click="cancel()">Cancel</button>
+    <button class="btn btn-primary" ng-click="register()">Create Account</button>
+</div>
