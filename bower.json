@@ -26,6 +26,12 @@
     "angularjs": "~1.4.1",
     "bootstrap": "~3.3.5",
     "bootstrap-material-design": "~0.3.0",
+<<<<<<< HEAD
     "font-awesome": "~4.4.0"
+=======
+    "font-awesome": "~4.4.0",
+    "angular-chart.js": "~0.8.4",
+    "progressbar.js": "~0.9.0"
+>>>>>>> 4e477e5a0a644ecb298e52f2cd1a2cc8a1bc2a3b
   }
 }

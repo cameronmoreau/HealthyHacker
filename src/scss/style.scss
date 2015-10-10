@@ -235,3 +235,11 @@ body {
 .menu-window{
 	padding:10px;
 }
+
+.progressbar-text {
+	font-size:60px !important;
+}
+
+.progressbar-text:after {
+	content: '%';
+}
