@@ -21,6 +21,12 @@
 				url: '/home',
 				templateUrl: './home/projects.html',
 				controller: 'ProjectsController'
+			})
+
+			.state('main.dashboard', {
+				url: '/dashboard',
+				templateUrl: './hackathon/dashboard.html',
+				controller: 'DashboardController'
 			});
 
 			// .state('main.apps', {
