@@ -3,7 +3,7 @@
 
     var app = angular.module('controller.auth', ['ui.bootstrap']);
 
-    app.controller('LoginController', function($scope, $modalInstance) {
+    app.controller('LoginController', function($scope, $modalInstance, User) {
         var myEl = angular.element(document.querySelector('#passwordField'));
 
         $scope.user = {
@@ -18,10 +18,6 @@
 
         $scope.login = function() {
             console.log('login');
-            //Auth.login($scope.user.email, $scope.user.password);
-
-            //console.log($scope.user.email);
-            //console.log($scope.user.password);
         }
 
         $scope.check = function() {
@@ -47,8 +43,6 @@
             var passwordEl = angular.element(document.querySelector('.input-password'));
 
             var valid = true;
-
-
 
             // YEAH THIS CODE SUCKS I'M TIRED AND I'M SORRY
             if(!firstName){
@@ -81,14 +75,29 @@
             }
 
             if(valid){
+                $scope.cancel();
                 // register here
             }
 
-            console.log(firstName+" "+
-                lastName+" "+
-                email+" "+
-                password+" "+
-                role);
+            var finalData = {
+                username: email,
+                firstName: firstName,
+                lastName: lastName,
+                email: email,
+                password: password,
+                primaryRole: role
+            }
+
+            User.create(finalData)
+                .then(function(user) {
+                    localStorage.setItem("user_id", user.data.objectId);
+                    localStorage.setItem("user_session", user.data.sessionToken);
+                    $modalInstance.dismiss('cancel');
+                })
+                .catch(function(error) {
+                    console.log(error);
+                    alert('Error registering account');
+                });
         }
         $scope.changeDropDown = function(role){
             $scope.user.role = role;

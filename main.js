@@ -3,8 +3,10 @@
 var _ = require('lodash');
 var app = require('app');
 var path = require('path');
+var ipc = require('ipc');
 var BrowserWindow = require('browser-window');
 var menubar = require('menubar');
+
 
 //var robot = require("robotjs");
 
@@ -40,13 +42,17 @@ var menu = menubar({
 menu.on('ready', function() {
     input.mouse();
     input.shortCuts();
-
-
-
 });
 
 app.on('ready', function() {
+    showMainWindow();
 
+    ipc.on('show-main', function() {
+        showMainWindow();
+    });
+});
+
+var showMainWindow = function() {
     mainWindow = new BrowserWindow({
         width: 800,
         height: 600
@@ -58,4 +64,4 @@ app.on('ready', function() {
     mainWindow.on('closed', function() {
         mainWindow = null;
     });
-});
+}

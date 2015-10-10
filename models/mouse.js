@@ -14,7 +14,7 @@ exports.score = function(list){
 
 	// var length = list.length;
 	// list = list.sort();
-	
+
 	// var mid = list[parseInt(length/2)];
 	// var low_q = list[parseInt(length/4)];
 
@@ -43,7 +43,3 @@ exports.score = function(list){
 		return ((200 - sum)/200) % 10
 
 };
-
-
-
-
