@@ -6,16 +6,9 @@
 	var app = angular.module('controller.hackathon', ['chart.js']);
 
 	app.controller('DashboardController', function($scope, Productivity, $interval) {
-	// 	$scope.datetime = ["10/10/2015 14:00", "10/10/2015 14:30", "10/10/2015 15:00", "10/10/2015 15:30",
-	// 	 "10/10/2015 16:00", "10/10/2015 16:30", "10/10/2015 17:00", "fdsfds", "fdsfds", "fdsfds", "fdsfds", "fdsfds", "fdsfds",
-    //  "fdsfds", "fdsfds", "fdsfds", "fdsfds", "fdsfds"];
 		$scope.productivityLevel = [[]];
 		$scope.datetime = [];
 	  $scope.series = ['TAMUHack'];
-	  //$scope.productivityLevel = [Productivity.getProductivity()];
-  //   $interval(function () {
-  //   //$scope.productivityLevel = [Productivity.changeProductivity()];
-  // }, 3000);
   		var tempData = [];
 
   		$interval(function() {
@@ -26,16 +19,6 @@
 			 var score = input.getScore(tempData);
 			 score = Math.abs(score - 10);
 			 $scope.productivityLevel[0].push(score);
-			// if($scope.productivityLevel.length == 0) {
-			// 	$scope.productivityLevel.push(score);
-			// 	$scope.productivityLevel = [$scope.productivityLevel];
-			// } else {
-			// 	$scope.productivityLevel.push(score);
-			// }
-			// $scope.productivityLevel = [$scope.productivityLevel];
-			// $scope.productivityLevel.push(score);
-			// $scope.productivityLevel = [].concat.apply([],$scope.productivityLevel);
-			// $scope.productivityLevel = [$scope.productivityLevel];
 			var d = new Date().getTime();
 			$scope.datetime.push(d);
 
