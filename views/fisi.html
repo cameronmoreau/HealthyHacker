@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="HealthyHacker">
+  <head>
+    <title>Healthy Hacker</title>
+    <link rel="stylesheet" href="../dist/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../dist/vendor/font-awesome/css/font-awesome.min.css">
+
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../dist/vendor/angular-chart.js/dist/angular-chart.css" />
+    <link rel="stylesheet" href="../dist/vendor/bootstrap-material-design/dist/css/material.css" />
+    <link rel="stylesheet" href="../dist/vendor/bootstrap-material-design/dist/css/ripples.css" />
+    <!-- endbower -->
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="../dist/css/style.css">
+  </head>
+  <body ng-controller="BreakController" style="text-align: center; padding: 15px">
+
+
+    <h1>{{task.message}}</h1>
+    <h4>for</h4>
+    <h2>{{ time }} minutes</h2>
+
+    <div class="form-group" style="width: 80%; margin: 35px auto 0;">
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Save your thought">
+        <button type="button" class="btn btn-danger">Cancel Break</button>
+        <button type="button" class="btn btn-info">Save</button>
+      </div>
+
+    <!-- REQUIRED -->
+    <script src="../jspm_packages/system.js"></script>
+    <script src="../config.js"></script>
+
+    <script src="../dist/vendor/jquery/dist/jquery.min.js"></script>
+
+    <!-- bower:js -->
+    <script src="../dist/vendor/jquery/dist/jquery.js"></script>
+    <script src="../dist/vendor/angular/angular.js"></script>
+    <script src="../dist/vendor/angularjs/angular.js"></script>
+    <script src="../dist/vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="../dist/vendor/Chart.js/Chart.js"></script>
+    <script src="../dist/vendor/angular-chart.js/dist/angular-chart.js"></script>
+    <script src="../dist/vendor/angular-mocks/angular-mocks.js"></script>
+    <script src="../dist/vendor/angular-resource/angular-resource.js"></script>
+    <script src="../dist/vendor/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../dist/vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../dist/vendor/bootstrap-material-design/dist/js/material.js"></script>
+    <script src="../dist/vendor/bootstrap-material-design/dist/js/ripples.js"></script>
+    <script src="../dist/vendor/progressbar.js/dist/progressbar.js"></script>
+    <!-- endbower -->
+
+    <script src="../dist/app/app.js"></script>
+
+    <script src="../dist/app/controllers/home.js"></script>
+    <script src="../dist/app/controllers/auth.js"></script>
+    <script src="../dist/app/controllers/hackathon.js"></script>
+    <script src="../dist/app/controllers/task.js"></script>
+
+    <script src="../dist/app/services/parse.js"></script>
+    <script src="../dist/app/services/auth.js"></script>
+    <script src="../dist/app/services/productivity.js"></script>
+    <script src="../dist/app/services/task.js"></script>
+    <script src="../dist/app/services/hackathon.js"></script>
+
+
+
+  </body>
+</html>

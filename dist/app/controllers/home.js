@@ -108,5 +108,10 @@
         }
     });
 
+    app.controller('BreakController', function($scope, Task) {
+        $scope.task = Task.randomTask();
+        $scope.time = Math.floor(Math.random() * 15 + 1);
+    });
+
 
 })();

@@ -12,6 +12,10 @@
         $scope.openMainWindow = function() {
             ipc.send('show-main');
         }
+
+        $scope.startBreak = function() {
+            ipc.send('show-break');
+        }
     });
 
 })();

@@ -50,12 +50,16 @@ app.on('ready', function() {
     ipc.on('show-main', function() {
         showMainWindow();
     });
+
+    ipc.on('show-break', function() {
+        showBreakWindow();
+    });
 });
 
 var showMainWindow = function() {
     mainWindow = new BrowserWindow({
-        width: 800,
-        height: 600
+        width: 950,
+        height: 625
     });
     mainWindow.loadUrl(path.join('file://', __dirname, options.views_dir, options.root_view));
     if (options.debug) {
@@ -63,5 +67,19 @@ var showMainWindow = function() {
     }
     mainWindow.on('closed', function() {
         mainWindow = null;
+    });
+}
+
+var showBreakWindow = function() {
+    var breakWindow = new BrowserWindow({
+        width: 500,
+        height: 300
+    });
+    breakWindow.loadUrl(path.join('file://', __dirname, options.views_dir, 'fisi.html'));
+    if (options.debug) {
+        breakWindow.openDevTools();
+    }
+    breakWindow.on('closed', function() {
+        breakWindow = null;
     });
 }
