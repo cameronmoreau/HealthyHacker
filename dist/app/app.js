@@ -53,7 +53,7 @@
         })
 
         .state('hackathon.dashboard', {
-            url: '/dashboard',
+            url: '/dashboard/',
             templateUrl: './hackathon/dashboard.html',
             controller: 'DashboardController'
         })
@@ -87,7 +87,7 @@
             templateUrl: './activity/task.html',
             controller:'TaskController'
         })
-        
+
        .state('register',{
         url: '/register',
         templateUrl: './auth/register.html',

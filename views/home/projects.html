@@ -1,6 +1,6 @@
 <div>
     <h1 style="display:inline-block">Hackathon Projects</h1>
-    <button ng-click="addHackathon()" class="btn btn-primary" style="float:right; margin-top:25px">Add</button>
+    <button ng-click="openAddModal()" class="btn btn-primary" style="float:right; margin-top:25px">Add</button>
 </div>
 <div class="col-sm-6 project-box" ng-repeat="project in projects">
     <div class="well">
@@ -13,18 +13,21 @@
                     <!-- <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon"> -->
                 </div>
 
+
+
                 <div class="content">
                     <h3>{{ project.name }}</h3>
                     <div class="date">
                         <strong>Date:</strong>
                         {{project.date}}</div>
                 </div>
+
             </div>
         </div>
     </a>
 </div>
-
-<a ui-sref="login">test Login</a>
+</div>
 <a ui-sref="task">Go to Task</a>
-<a ui-sref="register"> go to Register</a>
-<button type="button" class="btn btn-default" ng-click="openLoginModal()">Open me!</button>
+
+<button type="button" class="btn btn-default" ng-click="openLoginModal()">LOGIN! </button>
+<button type="button" class="btn btn-default" ng-click="openRegisterModal()">REGISTER!</button>

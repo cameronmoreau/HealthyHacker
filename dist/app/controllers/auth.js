@@ -88,6 +88,7 @@
             }
 
             if(valid){
+                $scope.cancel();
                 // register here
             }
 
