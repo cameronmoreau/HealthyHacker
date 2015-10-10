@@ -28,8 +28,6 @@ body {
 	background: #fff;
 }
 
-
-
 /* SIDE BAR */
 #wrapper {
 	padding-left: 0;
@@ -168,4 +166,14 @@ body {
 		position: relative;
 		margin-right: 0;
 	}
-/*}*/
+.right{
+	float:right;
+}
+
+.align{
+	text-align:center;
+}
+
+.menu-window{
+	padding:10px;
+}
