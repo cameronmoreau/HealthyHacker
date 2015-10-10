@@ -4,6 +4,7 @@
 @import 'includes/footer';
 
 $sidebar-width: 200px;
+$sidebar-width-collapse: 60px;
 $color-background: #f8f8f8;
 $color-sidebar: #31323A;
 $color-highlight: #F75163;
@@ -58,6 +59,11 @@ body {
 	transition: all 0.5s ease;
 }
 
+.sidebar-collapse #sidebar-wrapper {
+	left: $sidebar-width-collapse;
+	margin-left: -$sidebar-width-collapse;
+}
+
 #wrapper.toggled #sidebar-wrapper {
 	width: $sidebar-width;
 }
@@ -82,6 +88,10 @@ body {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+}
+
+.sidebar-collapse .sidebar-nav {
+	width: $sidebar-width-collapse;
 }
 
 .sidebar-nav li {
@@ -147,12 +157,20 @@ body {
 		padding-left: $sidebar-width;
 	}
 
+	#wrapper.sidebar-collapse {
+		padding-left: $sidebar-width-collapse;
+	}
+
 	#wrapper.toggled {
 		padding-left: 0;
 	}
 
 	#sidebar-wrapper {
 		width: $sidebar-width;
+	}
+
+	.sidebar-collapse #sidebar-wrapper {
+		width: $sidebar-width-collapse;
 	}
 
 	#wrapper.toggled #sidebar-wrapper {

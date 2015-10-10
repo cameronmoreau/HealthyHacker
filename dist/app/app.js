@@ -11,7 +11,7 @@
 			.state('main', {
 				abstract: true,
 				url: '/main',
-				templateUrl: './base/hackathon-sidebar.html',
+				templateUrl: './base/home-sidebar.html',
 				controller: function($scope, $state) {
 					$scope.$state = $state;
 				}
