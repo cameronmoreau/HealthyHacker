@@ -18,21 +18,23 @@
             date: '1/10/2015'
         }, ];
 
+
         $scope.openStartDateTimePicker = function($event) {
-            $scope.status.opened = true;
+            $scope.status.startOpened = true;
         };
          $scope.openEndDateTimePicker = function($event) {
-            $scope.status.opened = true;
+            $scope.status.endOpened = true;
         };
 
           $scope.status = {
-            opened: false
+            startOpened: false,
+            endOpened: false
           };
 
         $scope.test = function(){
             console.log($scope.addProjectStartTime);
         }
-        $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
+        $scope.formats = ['dd/MM/yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
         $scope.format = $scope.formats[0];
 
 
@@ -60,6 +62,51 @@
                 templateUrl: 'home/addProject.html',
                 controller: 'ProjectsController'
             });
+        }
+
+  $scope.ismeridian = true;
+  $scope.toggleMode = function() {
+    $scope.ismeridian = ! $scope.ismeridian;
+  };
+
+        $scope.hstep = 1;
+        $scope.mstep = 5;
+         $scope.update = function() {
+            var d = new Date();
+            d.setHours( 14 );
+            d.setMinutes( 0 );
+            $scope.mytime = d;
+          };
+
+        $scope.cancel = function(){
+            $scope.$close(null);
+        }
+
+        var time;
+
+        $scope.addHackathon = function(){
+
+            //console.log($scope.mytime);
+            var time = $scope.mytime;
+            if($scope.addProjectName&&$scope.dtStart){
+                var date = $scope.dtStart;
+               console.log(time.getHours()+" "+time.getMinutes())
+               date.setHours(time.getHours());
+               date.setMinutes(time.getMinutes());
+               console.log(date)
+                $scope.tempProj = {
+                    name : $scope.addProjectName,
+                    team : 4,
+                    date : date
+
+                };
+                $scope.projects.push($scope.tempProj)
+                console.log( $scope.projects);
+                $scope.$apply();
+            }
+            else{
+               // alert('error');
+            }
         }
 
     });

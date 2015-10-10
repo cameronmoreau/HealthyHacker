@@ -16,26 +16,19 @@
     </form>
 
      <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-12">
             <p class="input-group">
-              <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dtStart" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions"  ng-required="true" close-text="Close" />
+              <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dtStart" is-open="status.startOpened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions"  ng-required="true" close-text="Close" />
               <span class="input-group-btn">
                 <button type="button" class="btn btn-default" ng-click="openStartDateTimePicker($event)"><i class="glyphicon glyphicon-calendar"></i></button>
               </span>
             </p>
         </div>
-   
-        <div class="col-sm-6">
-            <p class="input-group">
-              <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dtEnd" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions"  ng-required="true" close-text="Close" />
-              <span class="input-group-btn">
-                <button type="button" class="btn btn-default" ng-click="openEndDateTimePicker($event)"><i class="glyphicon glyphicon-calendar"></i></button>
-              </span>
-            </p>
-        </div>
+
     </div>
+     <uib-timepicker ng-model="mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></uib-timepicker>
 
 <div class="modal-footer">
-    <button class="btn btn-default" ng-click="test()">Cancel</button>
-    <button class="btn btn-primary" ng-click="test()">Submit</button>
+    <button class="btn btn-default" ng-click="cancel()">Cancel</button>
+    <button class="btn btn-primary" ng-click="addHackathon()">Submit</button>
 </div>
