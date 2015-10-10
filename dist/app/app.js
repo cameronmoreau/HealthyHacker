@@ -4,7 +4,8 @@
     var app = angular.module('HealthyHacker', [
         'ui.router',
         'controller.home',
-        'controller.auth'
+        'controller.auth',
+        'service.auth'
     ]);
 
     app.config(function($stateProvider, $urlRouterProvider) {
