@@ -17,10 +17,25 @@
 				}
 			})
 
+            .state('hackathon', {
+                abstract: true,
+                url: '/hackathon',
+                templateUrl: './base/hackathon-sidebar.html',
+                controller: function($scope, $state) {
+                    $scope.$state = $state;
+                }
+            })
+
             .state('main.home', {
 				url: '/home',
 				templateUrl: './home/projects.html',
 				controller: 'ProjectsController'
+			})
+
+			.state('hackathon.dashboard', {
+				url: '/dashboard',
+				templateUrl: './hackathon/dashboard.html',
+				controller: 'DashboardController'
 			});
 
 			// .state('main.apps', {
