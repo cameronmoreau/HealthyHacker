@@ -3,7 +3,7 @@
 
     var app = angular.module('HealthyHacker', [
         'ui.router',
-        'controller.home'
+        'controller.home', 'controller.auth', 'controller.hackathon'
     ]);
 
     app.config(function($stateProvider, $urlRouterProvider) {
@@ -40,7 +40,8 @@
 
         .state('login', {
             url: '/login',
-            templateUrl: './auth/login.html'
+            templateUrl: './auth/login.html',
+            controller: 'LoginController'
         });
 
         // .state('main.apps', {

@@ -8,6 +8,7 @@ var menubar = require('menubar');
 
 //var robot = require("robotjs");
 
+var input = require('./data');
 // Report crashes to our server.
 require('crash-reporter').start();
 
@@ -53,4 +54,6 @@ app.on('ready', function() {
     });
 
     //console.log(robot.getMousePos());
+    // check for pressed shortcuts
+    input.shortCuts();
 });
