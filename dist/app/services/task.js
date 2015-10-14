@@ -160,9 +160,9 @@ app.factory('Task', function() {
 
             });
             return list;
-
-
-
+        },
+        randomTask: function() {
+            return tasks[Math.floor(Math.random()*tasks.length)];
         }
 
 

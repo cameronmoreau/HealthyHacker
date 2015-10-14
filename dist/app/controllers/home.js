@@ -90,7 +90,29 @@
 
     });
 
-    app.controller('SettingsController', function($scope, $uibModal) {
+    app.controller('SettingsController', function($scope, $uibModal, User) {
+        $scope.isLoggedIn = (localStorage.getItem('user_id') !== null);
+        $scope.user = {
+            name: 'N/A',
+            email: 'N/A',
+            github: 'N/A'
+        };
+
+        $scope.getUserData = function() {
+            User.get(localStorage.getItem('user_id'))
+                .then(function(user) {
+                    $scope.user = {
+                        name: user.data.firstName + ' ' + user.data.lastName,
+                        email: user.data.email
+                    };
+                })
+                .catch(function(error) {
+
+                })
+        }
+
+        $scope.getUserData();
+
         $scope.openLoginModal = function() {
             var modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
@@ -106,6 +128,22 @@
                 controller: 'LoginController'
             });
         }
+
+        $scope.logout = function() {
+            localStorage.removeItem('user_id');
+            localStorage.removeItem('user_session');
+            $scope.isLoggedIn = false;
+            $scope.user = {
+                name: 'N/A',
+                email: 'N/A',
+                github: 'N/A'
+            };
+        }
+    });
+
+    app.controller('BreakController', function($scope, Task) {
+        $scope.task = Task.randomTask();
+        $scope.time = Math.floor(Math.random() * 15 + 1);
     });
 
 

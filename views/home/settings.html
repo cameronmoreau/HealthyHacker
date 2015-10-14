@@ -1,8 +1,11 @@
 <div>
     <h1 style="display: inline-block;">Settings</h1>
-    <div style="float:right">
+    <div style="float:right" ng-if="!isLoggedIn">
         <button type="button" class="btn btn-default" ng-click="openRegisterModal()">Register</button>
         <button type="button" class="btn btn-primary" ng-click="openLoginModal()">Login</button>
+    </div>
+    <div style="float:right" ng-if="isLoggedIn">
+        <button type="button" class="btn btn-primary" ng-click="logout()">Logout</button>
     </div>
 </div>
 
@@ -10,23 +13,15 @@
     <tbody>
         <tr>
             <td>Name:</td>
-            <td>Cameron Moreau</td>
+            <td>{{ user.name }}</td>
         </tr>
         <tr>
             <td>Email:</td>
-            <td>cameron.cm6@gmail.com</td>
+            <td>{{ user.email }}</td>
         </tr>
         <tr>
             <td>Github URL:</td>
-            <td>https://github.com/idappthat</td>
-        </tr>
-        <tr>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
+            <td>{{ user.github }}</td>
         </tr>
     </tbody>
 </table>
